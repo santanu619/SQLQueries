@@ -41,3 +41,13 @@ select * from addressbook order by Firstname;
 
 
 alter table addressbook add Type varchar(20);
+
+update addressbook set Type = 'Family';
+
+update addressbook set Type = 'Friends' where City = 'Bhubaneswar';
+
+select count(Firstname) from addressbook where Type = 'Friends';
+
+update addressbook set Type = 'Profession';
+
+
