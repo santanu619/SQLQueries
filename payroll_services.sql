@@ -35,3 +35,5 @@ alter table employee_payroll add gender char(1);
 update employee_payroll set gender = 'M' where name in ('Billi','Mark');
 
 update employee_payroll set gender='F' where name in ('Terisa','Charlie');
+
+select sum(salary) from employee_payroll where gender = 'F';
