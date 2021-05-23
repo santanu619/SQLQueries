@@ -36,3 +36,5 @@ select * from addressbook where City = 'Bhubaneswar' or State= 'Karnataka';
 
 select count(FirstName) from addressbook where City = 'Bhubaneswar';
 select count(LastName) from addressbook where City = 'Bhubaneswar';
+
+select * from addressbook order by Firstname;
