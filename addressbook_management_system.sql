@@ -1,8 +1,8 @@
-create database payroll_service
+create database addressbook_management
 
 select * from sys.databases;
 
-use payroll_service;
+use addressbook_management;
 
 select db_name(); 
 
@@ -31,3 +31,5 @@ select * from addressbook;
 update addressbook set Email = 'santanu_201700005@smit.smu.edu.in' where Firstname = 'Santanu';
 
 delete from addressbook where Firstname = 'Anshumaan';
+
+select * from addressbook where City = 'Bhubaneswar' or State= 'Karnataka';
