@@ -23,3 +23,5 @@ select * from employee_payroll;
 
 insert into employee_payroll(name,salary,start) values
 ('Mark',100000,'2021-01-09');
+
+select * from employee_payroll;
