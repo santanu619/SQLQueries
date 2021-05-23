@@ -18,3 +18,5 @@ insert into employee_payroll values
 ('Billi',100000.0,'2018-08-21'),
 ('Terisa',200000.0,'2019-10-18'),
 ('Johnathan',300000.0,'2021-01-21');
+
+select * from employee_payroll;
