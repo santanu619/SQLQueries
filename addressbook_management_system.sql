@@ -25,3 +25,5 @@ insert into addressbook values
 ('Anindita','Dash','Electronic City','Bengaluru','Karnataka','568687','8478567843','aninditadash@gmail.com'),
 ('Nihar Ranjan','Mishra','Electronic City','Bengaluru','Karnataka','568687','8790987654','niharranjanmishra@gmail.com'),
 ('Anshumaan','Dash','VIP Road','Puri','Odisha','763011','8280946694','anshumaandash@outlook.com')
+
+select * from addressbook;
