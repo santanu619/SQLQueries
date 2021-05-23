@@ -38,3 +38,6 @@ select count(FirstName) from addressbook where City = 'Bhubaneswar';
 select count(LastName) from addressbook where City = 'Bhubaneswar';
 
 select * from addressbook order by Firstname;
+
+
+alter table addressbook add Type varchar(20);
