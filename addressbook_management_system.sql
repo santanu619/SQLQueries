@@ -27,3 +27,5 @@ insert into addressbook values
 ('Anshumaan','Dash','VIP Road','Puri','Odisha','763011','8280946694','anshumaandash@outlook.com')
 
 select * from addressbook;
+
+update addressbook set Email = 'santanu_201700005@smit.smu.edu.in' where Firstname = 'Santanu'
