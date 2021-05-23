@@ -32,4 +32,6 @@ select * from employee_payroll where start between cast('2020-02-12' as date) an
 
 alter table employee_payroll add gender char(1);
 
+update employee_payroll set gender = 'M' where name in ('Billi','Mark');
 
+update employee_payroll set gender='F' where name in ('Terisa','Charlie');
