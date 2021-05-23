@@ -27,3 +27,5 @@ insert into employee_payroll(name,salary,start) values
 select * from employee_payroll;
 
 select salary from employee_payroll where name='Mark';
+
+select * from employee_payroll where start between cast('2020-02-12' as date) and GETDATE();
