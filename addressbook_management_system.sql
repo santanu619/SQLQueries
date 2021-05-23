@@ -33,3 +33,6 @@ update addressbook set Email = 'santanu_201700005@smit.smu.edu.in' where Firstna
 delete from addressbook where Firstname = 'Anshumaan';
 
 select * from addressbook where City = 'Bhubaneswar' or State= 'Karnataka';
+
+select count(FirstName) from addressbook where City = 'Bhubaneswar';
+select count(LastName) from addressbook where City = 'Bhubaneswar';
