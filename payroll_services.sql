@@ -48,3 +48,6 @@ select count(salary), gender from employee_payroll group by gender;
 
 alter table employee_payroll add PhoneNumber int(12), Address varchar(50) default('Bhubaneswar'), Department varchar(30) not null default 'CSE';
 
+alter table employee_payroll add Deduction int(20), TaxablePay int(20), IncomeTax int(20), NetPay int(20);
+
+EXEC sp_RENAME 'employee_payroll.salary', 'BasicPay', 'column';
