@@ -45,3 +45,6 @@ select min(salary), gender from employee_payroll group by gender;
 select max(salary), gender from employee_payroll group by gender;
 
 select count(salary), gender from employee_payroll group by gender;
+
+alter table employee_payroll add PhoneNumber int(12), Address varchar(50) default('Bhubaneswar'), Department varchar(30) not null default 'CSE';
+
