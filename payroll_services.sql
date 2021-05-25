@@ -69,28 +69,24 @@ alter table employee_payroll drop column BasicPay, Deduction, TaxablePay, Income
 
 select id into Payroll from employee_payroll;
 
-alter table company add CompanyName varchar(30) default 'Microsoft';
-
-update table company  set CompanyName = 'Microsoft' where CompanyName IS NULL ;
-
 select * from Payroll;
 
 drop table Payroll;
 
-select id, department into Department from employee_payroll;
+select * into department from employee_payroll;
 
 alter table department add foreign key(ID) references employee_payroll(id);
 
 select * from department;
 
-drop table department;
+select sum(salary) from department where gender = 'F';
 
-alter table employee_payroll drop column Department;
+select avg(salary), gender from department group by gender;
 
-select * from employee_payroll;
-select * from Payroll;
-select * from department;
-select * from company;
+select min(salary), gender from department group by gender;
 
-delete from Payroll where id=5;
-delete from employee_payroll where id=5;
+select max(salary), gender from department group by gender;
+
+select count(salary), gender from department group by gender;
+
+
