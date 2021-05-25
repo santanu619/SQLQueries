@@ -51,3 +51,46 @@ alter table employee_payroll add PhoneNumber int(12), Address varchar(50) defaul
 alter table employee_payroll add Deduction int(20), TaxablePay int(20), IncomeTax int(20), NetPay int(20);
 
 EXEC sp_RENAME 'employee_payroll.salary', 'BasicPay', 'column';
+
+insert into employee_payroll(name, salary, start date, gender) values
+('Terisa', 30000, '2019-10-18','F');
+
+update employee_payroll set Department = 'Sales'  where Name  = 'Terisa';
+
+insert into employee_payroll(name, Department) values('Terisa', 'Marketing');
+
+select id, BasicPay, Deduction, TaxablePay, IncomeTax, NetPay into payroll from employee_payroll;
+
+select * from Payroll;
+
+alter table Payroll add foreign key(ID) references employee_payroll(ID);
+
+alter table employee_payroll drop column BasicPay, Deduction, TaxablePay, IncomeTax, NetPay;
+
+select id into Payroll from employee_payroll;
+
+alter table company add CompanyName varchar(30) default 'Microsoft';
+
+update table company  set CompanyName = 'Microsoft' where CompanyName IS NULL ;
+
+select * from Payroll;
+
+drop table Payroll;
+
+select id, department into Department from employee_payroll;
+
+alter table department add foreign key(ID) references employee_payroll(id);
+
+select * from department;
+
+drop table department;
+
+alter table employee_payroll drop column Department;
+
+select * from employee_payroll;
+select * from Payroll;
+select * from department;
+select * from company;
+
+delete from Payroll where id=5;
+delete from employee_payroll where id=5;
