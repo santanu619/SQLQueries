@@ -89,4 +89,12 @@ select max(salary), gender from department group by gender;
 
 select count(salary), gender from department group by gender;
 
+select * from employee_payroll;
+
+select * from department;
+
+select * from employee_payroll, department  where employee_payroll.id = department.id and start date between '2019-01-12' and GETDATE();
+
+select employee_payroll.id,name,start date,gender,PhoneNumber, address, department,BasicPay,Deduction,TaxablePay,IncomeTax,NetPay from employee_payroll, department ,payroll where employee_payroll.id = department.id and employee_payroll.id = payroll.id; 
+
 
